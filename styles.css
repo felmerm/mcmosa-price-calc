@@ -10,6 +10,18 @@ body {
     align-items: center;
 }
 
+.product-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.product-icon {
+    cursor: pointer;
+    text-align: center;
+}
+
 .buttons {
     display: flex;
     margin: 10px 0;
@@ -33,3 +45,45 @@ input[type=number] {
     text-align: center;
     margin: 2px 2px;
 }
+
+#orderList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+}
+
+.remove-order-item {
+    cursor: pointer;
+    color: red;
+}
+
+.circle-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.product-icon:hover .circle-icon {
+    background-color: #5CB85C;
+}
+This will replace the images with circle icons containing short text or abbreviation. You can customize the appearance by adjusting the styles for the .circle-icon class in the "styles.css" file.
+
+
+
+
+
+

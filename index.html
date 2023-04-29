@@ -9,11 +9,14 @@
 <body>
     <h1>Product Order App</h1>
     <div class="container">
-        <select id="productSelect">
-            <option value="0">--Select a product--</option>
-            <option value="17">Veggie Samosa ($17)</option>
-            <!-- Add more products here -->
-        </select>
+        <div class="product-icons">
+            <div class="product-icon" onclick="selectProduct('Veggie Samosa', 17)">
+                <!--<img src="veggie-samosa-icon.png" alt="Veggie Samosa">-->
+                <div class = "circle-icon">VS</div>
+                <p>Veggie Samosa ($17)</p>
+            </div>
+            <!-- Add more product icons here -->
+        </div>
         <div class="buttons">
             <button onclick="changeQuantity(-100)">-100</button>
             <button onclick="changeQuantity(-10)">-10</button>
@@ -24,10 +27,10 @@
             <button onclick="changeQuantity(100)">+100</button>
         </div>
         <p id="calculation"></p>
-        <button id="saveOrder" onclick="saveOrder()">Save Order</button>
+        <button id="addOrder" onclick="addOrder()">Add to Order</button>
         <button id="cancelOrder" onclick="cancelOrder()">Cancel Order</button>
-        <div id="orderList"></div>
+        <ul id="orderList"></ul>
     </div>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
