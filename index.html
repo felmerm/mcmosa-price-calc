@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator App</title>
+    <title>Product Order App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Add your calculator HTML code here -->
+    <h1>Product Order App</h1>
+    <div class="container">
+        <select id="productSelect">
+            <option value="0">--Select a product--</option>
+            <option value="17">Veggie Samosa ($17)</option>
+            <!-- Add more products here -->
+        </select>
+        <div class="buttons">
+            <button onclick="changeQuantity(-100)">-100</button>
+            <button onclick="changeQuantity(-10)">-10</button>
+            <button onclick="changeQuantity(-1)">-1</button>
+            <input type="number" id="quantity" value="0" readonly>
+            <button onclick="changeQuantity(1)">+1</button>
+            <button onclick="changeQuantity(10)">+10</button>
+            <button onclick="changeQuantity(100)">+100</button>
+        </div>
+        <p id="calculation"></p>
+        <button id="saveOrder" onclick="saveOrder()">Save Order</button>
+        <button id="cancelOrder" onclick="cancelOrder()">Cancel Order</button>
+        <div id="orderList"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
